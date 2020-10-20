@@ -1,0 +1,18 @@
+#button {
+    padding: 12px;
+    border-radius: 3px;
+    border: none;
+    width: 150px;
+    transition: all .5s ease-in-out;
+    margin-left: 50%;
+    
+}
+
+#button:hover {
+    background-color: grey;
+    transform: translate(1px, -2px);
+}
+
+#button:focus {
+    background-color: red;
+}
