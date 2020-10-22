@@ -1,4 +1,4 @@
-#button {
+#start-button {
     padding: 12px;
     border-radius: 3px;
     border: none;
@@ -8,15 +8,35 @@
     
 }
 
-#button:hover {
+#start-button:hover {
     background-color: grey;
     transform: translate(1px, -2px);
 }
 
-#button:focus {
+#start-button:focus {
     background-color: red;
 }
 
+#answers-btn button {
+    background-color: lightblue;
+    border: 1px solid black;
+    color: black;
+    padding: 10px 24px;
+    cursor: pointer;
+    width: 50%;
+    display: block; 
+}
+
+#answers-btn button:not(:last-child) {
+    border-bottom: none;
+}
+
+
+#answers-btn button:hover {
+    background-color: blue;
+    color: white
+}
+
 .hide {
-    display: none;
+    display: none
 }

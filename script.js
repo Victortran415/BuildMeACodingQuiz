@@ -1,6 +1,6 @@
 var timeEle = document.querySelector("#time");
 var wrapEle = document.querySelector(".wrapper");
-var startBtn = document.querySelector("#button");
+var startBtn = document.querySelector("#start-button");
 var questContainer = document.querySelector("#questionnaires")
 var questEle = document.querySelector("#questions")
 var answerBtn = document.querySelector("#answers-btn")
@@ -41,7 +41,6 @@ function nextQs() {
 }
 
 function showQs (question) {
-
 }
 
 function selectedAnswers() {
