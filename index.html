@@ -11,10 +11,10 @@
 <body>
     <div class="first-page">
         <div class="row header">
-            <div class="col-md-10 col-sm-6">
+            <div class="col-md-10 ">
                 <h5 id="h-score">View HighScore</h5>
             </div>
-            <div class="col-md-2 col-sm-6">
+            <div class="col-md-2 ">
                 <h5 id="time">Time: 60 </h5>
             </div>
         </div>
@@ -28,10 +28,25 @@
             <div class="row" >
                 <div class="col-md-10 col-sm-6">
                     <p>You'll be given 5 code-related questions that must be answered within 60 seconds. If answered incorrectly, timer will deduct 10 seconds from the current time. Timer will start once you click "Begin Quiz</p>
-                    <button onclick="startTimer()" id="button" class="btn btn-success btn-lg">Begin Quiz</button>
+                    <!--button will start timer when clicked-->
+                    <button id="button" class="btn btn-success btn-lg">Begin Quiz</button>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div id="questionnaires" class="hide">
+                <div id="questions">Question</div>
+                <div id="answers-btn">
+                <button id="btn">Answer1</button>
+                <button id="btn">Answer2</button>
+                <button id="btn">Answer3</button>
+                <button id="btn">Answer4</button>
+            </div>
+            </div>
+            
+        </div>
+
 
 
 
