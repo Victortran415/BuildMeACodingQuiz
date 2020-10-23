@@ -1,3 +1,12 @@
+body {
+    background-color: white;
+}
+
+header {
+    background-color: whitesmoke;
+    padding-left: 10px;
+}
+
 #start-button {
     padding: 12px;
     border-radius: 3px;
@@ -18,7 +27,7 @@
 }
 
 #answers-btn button {
-    background-color: lightblue;
+    background-color: rgba(5, 182, 5, 0.87);
     border: 1px solid black;
     color: black;
     padding: 10px 24px;
@@ -31,9 +40,8 @@
     border-bottom: none;
 }
 
-
 #answers-btn button:hover {
-    background-color: blue;
+    background-color: forestgreen;
     color: white
 }
 

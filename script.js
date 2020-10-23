@@ -5,16 +5,16 @@ var questContainer = document.querySelector("#questionnaires")
 var questEle = document.querySelector("#questions")
 var answerBtn = document.querySelector("#answers-btn")
 
+
+var setTime = 60;
 //timer that will begin quiz to button is clicked
 function startTimer() {
-    var setTime = 60;
-    var count = setInterval(function () {
+    timeEle.textContent = setTime
+    var count = window.setInterval(function () {
         setTime--;
-        var timeEl = timeEle.textContent = "Time:" + " " + setTime;
+        timeEle.textContent = "Time:" + " " + setTime;
         if (setTime === 0) {
-            timeEle.innerHTML = setTime
-            clearInterval(count);
-            timeEle.textContent = timeEl
+            clearInterval(count);   
         }
     }, 1000);
 }
@@ -32,63 +32,59 @@ function startQuiz() {
     console.log("start")
     startBtn.classList.add("hide");
     questContainer.classList.remove("hide");
-    showQs();
+    showQuestions();
 
 }
-
-function nextQs() {
-    
-}
-
-function showQs (question) {
-}
-
-function selectedAnswers() {
-
-}
-
+//Quiz Questions
 var questions = [
     {
         question: "When using array what type of open/closing backets do you use?",
-        answer: [
-            {text: "curly backets", correct: false},
-            {text: "parathensis", correct: false},
-            {text: "sqaure backets", correct: true},
-            {text: "all the above", correct: false},
-        
-        ],
-
+        options: ["curly brackets {}", "parenthesis ()", "sqaure brackets []", "All of the above"],
+        correctAnswer: "C"
+    },
+    {
         question: "What are the common data types in Javascript?",
-        answer: [
-            {text: "Class, id, text", correct: false},
-            {text: "Boolean, Strings, Numbers", correct: true},
-            {text: "querySelector, getElementById, addEventListener", correct: false},
-            {text: "script, link, href", correct: false},
-        ],
-
+        options: ["Class, id, text", "Boolean, Strings, Numbers", "querySelector, getElementById, addEventListener", "script, link, href"],
+        correctAnswer: "B"
+        
+    },
+    {
         question: "Which element do we use to add Javascript to HTML?",
-        answer: [
-            {text: "<link>", correct: false},
-            {text: "<script>", correct: true},
-            {text: "<js>", correct: false},
-            {text: "<div>", correct: false},
-        ],
-
+        options: ["<link>", "<script>", "<js>", "<div>"],
+        correctAnswer: "B"
+    },     
+    {
         question: "If you wanted to comment out codes in Javascript, what do you use?",
-        answer: [
-            {text: "<!----Comment--->", correct: false},
-            {text: "Comment", correct: false},
-            {text: "//Comment", correct: true},
-            {text: "All three answers will work", correct: false},
-        ],
-
+        options: ["<!----Comment--->", "'Comment'", "//Comment", "All three answers will work"],
+        correctAnswer: "C"
+    },  
+    {
         question: "In order to set a variable to a String, what do you use?",
-        answer: [
-            {text: "single quotes", correct: false},
-            {text: 'double quotes', correct: false},
-            {text: "backtick", correct: true},
-            {text: "A & B", correct: true},
-        ],       
+        options: ["single quotes", "double quotes", "backtick", "A & B"],
+        correctAnswer: "D"    
     }
-]
+];
+
+var questionsPointer = 0;
+
+var btn1 = document.querySelector("#btn1");
+var btn2 = document.querySelector("#btn2");
+var btn3 = document.querySelector("#btn3");
+var btn4 = document.querySelector("#btn4");
+
+//Adding questions to buttons
+function showQuestions() {
+    if (questionsPointer === questions.length) {
+        clearInterval(count)
+    }
+    questEle.textContent = questions[questionsPointer].question
+    btn1.textContent = questions[questionsPointer].options[0];
+    btn2.textContent = questions[questionsPointer].options[1];
+    btn3.textContent = questions[questionsPointer].options[2];
+    btn4.textContent = questions[questionsPointer].options[3];
+}
+
+showQuestions()
+
+
 
