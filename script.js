@@ -86,5 +86,46 @@ function showQuestions() {
 
 showQuestions()
 
+btn1.addEventListener("click", function(){
+    if (btn1.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        console.log("correct")
+        questionsPointer++;
+        showQuestions()
+    } else {
+        console.log("wrong")
+        setTime -= 10;
+    }
+});
+btn2.addEventListener("click", function(){
+    if (btn2.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        console.log("correct")
+        questionsPointer++;
+        showQuestions()
+    } else {
+        console.log("wrong")
+        setTime -= 10;
+    }
+});
 
+btn3.addEventListener("click", function(){
+    if (btn3.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        console.log("correct")
+        questionsPointer++;
+        showQuestions()
+    } else {
+        console.log("wrong")
+        setTime -= 10;
+    }
+});
+btn4.addEventListener("click", function(){
+    if (btn4.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        console.log("correct")
+        questionsPointer++;
+        showQuestions()
+    } else {
+        console.log("wrong")
+        setTime -= 10;
+
+    }
+});
 
