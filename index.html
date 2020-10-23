@@ -38,17 +38,43 @@
 
         <div class="container">
             <div id="questionnaires" class="hide">
-                <div id="questions">Question:</div>
+                <div id="questions" >Question:</div>
                 <div id="answers-btn">
                 <button id="btn1" data-answer="A">A.</button>
                 <button id="btn2" data-answer="B">B.</button>
                 <button id="btn3" data-answer="C">C.</button>
                 <button id="btn4" data-answer="D">D.</button>
             </div>
-            </div>
-            
+            </div> 
         </div>
-        
+
+        <div id="final-score"> </div>
+
+        <div class="finish-section">
+            <h3>Quiz Completed!</h3>
+            <p id="correct-answer"> </p>
+            <p id="wrong-answer"></p>
+            <form class="form-inline">
+                <div class="form-group mb-2">
+                    <h5 id="initials">Enter initials </h5>
+                </div>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="enterInitial" placeholder="Enter your initials"> </div>
+                <button type="submit" class="btn btn-primary mb-2">Submit</button>
+            </form>
+        </div>
+        <div class="last-page">
+            <h2>HighScores</h2>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" id="score" value="1.">
+            </div>
+            <button class="highScoreBtn btn-primary mb-2" onclick="init()">Go Back</button>
+            <button class="highScoreBtn btn-primary mb-2" onclick="clearScore()">Clear HighScores</button>
+
+
+        </div>
+
+
 
 
 

@@ -4,6 +4,8 @@ var startBtn = document.querySelector("#start-button");
 var questContainer = document.querySelector("#questionnaires")
 var questEle = document.querySelector("#questions")
 var answerBtn = document.querySelector("#answers-btn")
+var finScore = document.querySelector("#final-score")
+var finishSec = document.querySelector("#finish-section")
 
 
 var setTime = 60;
@@ -88,20 +90,29 @@ showQuestions()
 
 btn1.addEventListener("click", function(){
     if (btn1.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        finScore.textContent = "Correct"
+        finScore.setAttribute("style", "color: green")
         console.log("correct")
         questionsPointer++;
         showQuestions()
     } else {
+        finScore.textContent = "Wrong"
+        finScore.setAttribute("style", "color: red")
         console.log("wrong")
         setTime -= 10;
     }
 });
+
 btn2.addEventListener("click", function(){
     if (btn2.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        finScore.textContent = "Correct"
+        finScore.setAttribute("style", "color: green")
         console.log("correct")
         questionsPointer++;
         showQuestions()
     } else {
+        finScore.textContent = "Wrong"
+        finScore.setAttribute("style", "color: red")
         console.log("wrong")
         setTime -= 10;
     }
@@ -109,23 +120,31 @@ btn2.addEventListener("click", function(){
 
 btn3.addEventListener("click", function(){
     if (btn3.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        finScore.textContent = "Correct"
+        finScore.setAttribute("style", "color: green")
         console.log("correct")
         questionsPointer++;
         showQuestions()
     } else {
+        finScore.textContent = "Wrong"
+        finScore.setAttribute("style", "color: red")
         console.log("wrong")
         setTime -= 10;
     }
 });
+
 btn4.addEventListener("click", function(){
     if (btn4.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
+        finScore.textContent = "Correct"
+        finScore.setAttribute("style", "color: green")
         console.log("correct")
         questionsPointer++;
         showQuestions()
     } else {
+        finScore.textContent = "Wrong"
+        finScore.setAttribute("style", "color: red")
         console.log("wrong")
         setTime -= 10;
-
     }
 });
 

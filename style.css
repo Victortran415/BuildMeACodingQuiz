@@ -36,6 +36,18 @@ header {
     display: block; 
 }
 
+#questionnaires {
+    margin-top: 30px;
+}
+
+#questions {
+    font-size: 30px;
+}
+
+#answers-btn {
+    font-size: 20px;
+}
+
 #answers-btn button:not(:last-child) {
     border-bottom: none;
 }
@@ -47,4 +59,26 @@ header {
 
 .hide {
     display: none
+}
+
+#final-score {
+    text-align: left;
+}
+
+.finish-section {
+    visibility: hidden;
+
+}
+
+.last-page {
+    visibility: hidden;
+}
+
+.highScoreBtn { 
+    padding: 10px;
+    margin: 10px; 
+    border: 1px solid cornsilk;
+    border-radius: 5px;
+    color: white;   
+    font-size: 1.em;
 }
