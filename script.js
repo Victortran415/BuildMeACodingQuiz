@@ -4,23 +4,25 @@ var startBtn = document.querySelector("#start-button");
 var questContainer = document.querySelector("#questionnaires")
 var questEle = document.querySelector("#questions")
 var answerBtn = document.querySelector("#answers-btn")
-var finScore = document.querySelector("#final-score")
-var finishSec = document.querySelector("#finish-section")
+var report = document.querySelector(".correct-or-wrong")
+var questionsPointer = 0;
+
 
 
 var setTime = 60;
+var count;
 //timer that will begin quiz to button is clicked
 function startTimer() {
     timeEle.textContent = setTime
     var count = window.setInterval(function () {
         setTime--;
         timeEle.textContent = "Time:" + " " + setTime;
+        console.log(setTime)
         if (setTime === 0) {
-            clearInterval(count);   
+            clearInterval(count); 
         }
     }, 1000);
 }
-
 
 document.addEventListener("click", function (event) {
     if (event.target === startBtn) {
@@ -30,13 +32,6 @@ document.addEventListener("click", function (event) {
     }
 })
 
-function startQuiz() {
-    console.log("start")
-    startBtn.classList.add("hide");
-    questContainer.classList.remove("hide");
-    showQuestions();
-
-}
 //Quiz Questions
 var questions = [
     {
@@ -48,7 +43,6 @@ var questions = [
         question: "What are the common data types in Javascript?",
         options: ["Class, id, text", "Boolean, Strings, Numbers", "querySelector, getElementById, addEventListener", "script, link, href"],
         correctAnswer: "B"
-        
     },
     {
         question: "Which element do we use to add Javascript to HTML?",
@@ -67,13 +61,16 @@ var questions = [
     }
 ];
 
-var questionsPointer = 0;
-
 var btn1 = document.querySelector("#btn1");
 var btn2 = document.querySelector("#btn2");
 var btn3 = document.querySelector("#btn3");
 var btn4 = document.querySelector("#btn4");
 
+function startQuiz() {
+    console.log("start")
+    startBtn.classList.add("hide");
+    questContainer.classList.remove("hide");
+}
 //Adding questions to buttons
 function showQuestions() {
     if (questionsPointer === questions.length) {
@@ -84,67 +81,61 @@ function showQuestions() {
     btn2.textContent = questions[questionsPointer].options[1];
     btn3.textContent = questions[questionsPointer].options[2];
     btn4.textContent = questions[questionsPointer].options[3];
+
 }
 
-showQuestions()
 
 btn1.addEventListener("click", function(){
     if (btn1.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
-        finScore.textContent = "Correct"
-        finScore.setAttribute("style", "color: green")
-        console.log("correct")
+        report.setAttribute("style", "color: green");
+        report.textContent = "CORRECT!!"
         questionsPointer++;
         showQuestions()
     } else {
-        finScore.textContent = "Wrong"
-        finScore.setAttribute("style", "color: red")
-        console.log("wrong")
+        report.setAttribute("style", "color: red");
+        report.textContent = "WRONG!!"
         setTime -= 10;
     }
 });
 
 btn2.addEventListener("click", function(){
     if (btn2.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
-        finScore.textContent = "Correct"
-        finScore.setAttribute("style", "color: green")
-        console.log("correct")
+        report.setAttribute("style", "color: green");
+        report.textContent = "CORRECT!!"
         questionsPointer++;
         showQuestions()
     } else {
-        finScore.textContent = "Wrong"
-        finScore.setAttribute("style", "color: red")
-        console.log("wrong")
+        report.setAttribute("style", "color: red");
+        report.textContent = "WRONG!!"
         setTime -= 10;
     }
 });
 
 btn3.addEventListener("click", function(){
     if (btn3.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
-        finScore.textContent = "Correct"
-        finScore.setAttribute("style", "color: green")
-        console.log("correct")
+        report.setAttribute("style", "color: green");
+        report.textContent = "CORRECT!!"
         questionsPointer++;
         showQuestions()
+    
     } else {
-        finScore.textContent = "Wrong"
-        finScore.setAttribute("style", "color: red")
-        console.log("wrong")
+        report.setAttribute("style", "color: red");
+        report.textContent = "WRONG!!"
         setTime -= 10;
     }
 });
 
 btn4.addEventListener("click", function(){
     if (btn4.getAttribute("data-answer") === questions[questionsPointer].correctAnswer) {
-        finScore.textContent = "Correct"
-        finScore.setAttribute("style", "color: green")
-        console.log("correct")
+        report.setAttribute("style", "color: green");
+        report.textContent = "CORRECT!!"
         questionsPointer++;
         showQuestions()
     } else {
-        finScore.textContent = "Wrong"
-        finScore.setAttribute("style", "color: red")
-        console.log("wrong")
+        report.setAttribute("style", "color: red");
+        report.textContent = "WRONG!!"
         setTime -= 10;
     }
 });
+showQuestions()
 
