@@ -23,7 +23,7 @@
         </div></header>
     
 
-        <div class="wrapper">
+        <div class="wrapper mt-5">
             <div class=" row ">
                 <div class="col-md-10 col-sm-6 text-center">
                     <h2>Web APIs: Code Quiz</h2>
@@ -31,7 +31,7 @@
             </div>
             <div class="row" >
                 <div class="col-md-10 col-sm-6 text-center">
-                    <p>You'll be given 5 code-related questions that must be answered within 60 seconds. If answered incorrectly, timer will deduct 10 seconds from the current time. Timer will start once you click "Begin Quiz</p>
+                    <p class="start-info">You'll be given 5 code-related questions that must be answered within 60 seconds. If answered incorrectly, timer will deduct 10 seconds from the current time. You must click the correct answer to move on to the next question. Timer will start once you click "Begin Quiz</p>
                     <!--button will start timer when clicked-->
                     <button id="start-button" class="btn btn-success btn-lg">Begin Quiz</button>
                 </div>
@@ -42,28 +42,30 @@
         <div class="container">
             
             <div id="questionnaires" class="hide">
+                <h2 class="currScore">Score: </h2>
                 <div id="questions" >Question:</div>
-                <div id="answers-btn">
-                <button id="btn1" data-answer="A">A.</button>
-                <button id="btn2" data-answer="B">B.</button>
-                <button id="btn3" data-answer="C">C.</button>
-                <button id="btn4" data-answer="D">D.</button>
-            </div>
-            <h4 class="correct-or-wrong"></h4>
+                    <div id="answers-btn">
+                        <button id="btn1" data-answer="A">A.</button>
+                        <button id="btn2" data-answer="B">B.</button>
+                        <button id="btn3" data-answer="C">C.</button>
+                        <button id="btn4" data-answer="D">D.</button>
+                    </div>
+            <h4 class="correct-or-incorrect"></h4>
+            
             </div> 
         </div>
 
         <!---last page where you can post your score--->
 
-        <div class="divContainer" id="submit-score">
+        <div class="divContainer d-none" id="submit-score">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8">
                     <h2>Quiz Complete!</h2>
                     <p id="user-score"> </p>
                     <form class="form-group">
-                        <label for="official-score">Enter your name or Initial: </label>
+                        <label for="yourInitial">Enter your name or Initial: </label>
                         <input type="text" id="yourName"> 
-                        <button type="button" class="btn btn-primary btn-sm submitBtn">Submit</button>
+                        <button type="button" class="btn btn-primary btn-sm submit-Btn">Submit</button>
                     </form>
                 </div>
             </div>

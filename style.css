@@ -8,7 +8,7 @@ header {
     padding-top: 15px;
 }
 
-#start-info {
+.start-info {
     font-size: 20px;
 }
 
@@ -55,7 +55,7 @@ header {
 }
 
 #answers-btn button:hover {
-    background-color: forestgreen;
+    background-color: rgb(0, 140, 255);
     color: white
 }
 
@@ -63,6 +63,9 @@ header {
     display: none;
 }
 
-.divContainer {
-    display: none;
+
+
+.currScore {
+    text-decoration: underline;
+    color: blue;
 }
