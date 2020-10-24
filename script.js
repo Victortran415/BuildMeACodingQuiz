@@ -63,7 +63,7 @@ var questions = [
     },
     {
         question: "Which element do we use to add Javascript to HTML?",
-        options: ["<js>", "<script>", "<link>", "<div>"],
+        options: ["<script>", "<js>", "<link>", "<div>"],
         correctAnswer: "A"
     },     
     {
