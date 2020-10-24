@@ -1,11 +1,29 @@
 body {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 header {
-    background-color: whitesmoke;
-    padding-left: 10px;
+    background-color: gray;
+    padding-left: 25px;
     padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#h-score {
+    color: red;
+    text-decoration: underline;
+    font-size: 20px;
+    
+}
+
+#highscore-list {
+    font-size: 25px;
+}
+
+#clearBtn {
+    width: 300px;
+    text-align: center;
 }
 
 .start-info {
@@ -16,16 +34,16 @@ header {
     padding: 20px 20px 20px 20px;
     font-size: 30px;
     border-radius: 20px;
-    transition: all .5s ease-in-out;
+    transition: all .7s ease-in-out;
+    border-color: black;
+    border-width: 3px;
+    
 }
 
 #start-button:hover {
     background-color: grey;
+    color: black;
     transform: translate(1px, -2px);
-}
-
-#start-button:focus {
-    background-color: red;
 }
 
 #answers-btn button {
