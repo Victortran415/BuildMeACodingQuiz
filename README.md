@@ -1,7 +1,9 @@
 # Web APIs: Code Quiz
 
+In this week homework, the task was to create a Code-Related quiz using HTML, CSS, and Javascript. I created a 5 question quiz with a timer. When the user click the "Being Quiz" button, the timer should start counting down. Each question will present the current score that is equivalent to the timer. Whenever the user gets an answer wrong, they will be penalized by 10 seconds. At the end of the quiz a prompt will appear to notify the user that the quiz has been completed. 
 
-As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+Repo link: https://github.com/Victortran415/BuildMeACodingQuiz
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+GitHub link: https://victortran415.github.io/BuildMeACodingQuiz/index.html
 
+Screenshots: https://github.com/Victortran415/BuildMeACodingQuiz/issues/1
